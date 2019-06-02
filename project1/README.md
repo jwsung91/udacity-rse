@@ -37,9 +37,7 @@ $ git clone https://github.com/samchiRobot/Udacity_RoboticsEngineer/tree/master/
 
 #### Step 3 Compile the code
 ```sh
-$ cd /home/workspace/project1/
-$ mkdir build
-$ cd build/
+$ cd /home/workspace/project1/build/
 $ cmake ../
 $ make
 ```
