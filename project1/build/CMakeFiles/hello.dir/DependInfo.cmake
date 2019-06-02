@@ -4,32 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sung/project1/script/hello.cpp" "/home/sung/project1/build/CMakeFiles/hello.dir/script/hello.cpp.o"
+  "/home/workspace/project1/script/hello.cpp" "/home/workspace/project1/build/CMakeFiles/hello.dir/script/hello.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# Preprocessor definitions for this target.
-set(CMAKE_TARGET_DEFINITIONS_CXX
-  "LIBBULLET_VERSION=2.87"
-  "LIBBULLET_VERSION_GT_282"
-  )
-
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/gazebo-9"
-  "/usr/include/bullet"
-  "/usr/include/simbody"
-  "/usr/include/sdformat-6.0"
-  "/usr/include/ignition/math4"
+  "/usr/include/gazebo-7"
+  "/usr/include/sdformat-4.0"
+  "/usr/include/ignition/math2"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
   "/usr/include/OGRE/Paging"
-  "/usr/include/ignition/transport4"
-  "/usr/include/ignition/msgs1"
-  "/usr/include/ignition/common1"
-  "/usr/include/ignition/fuel_tools1"
-  "/usr/include/uuid"
-  "/usr/include/x86_64-linux-gnu"
   )
 
 # Targets to which this target links.
