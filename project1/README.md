@@ -57,3 +57,4 @@ $ gazebo jin_world
 
 ### Output
 Gazebo World should both launch as follow
+![alt text](images/project1_output.png)
