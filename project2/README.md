@@ -11,21 +11,37 @@
    - Create a ball_chaser ROS package
    - Create `ball_chaser/command_robot` service to drive the robot by controlling its linear x and angular z velocities
    - Write a `process_image` C++ node that reads my robot’s camera image
-      - And analyzes it to determine the presence and position `of a white ball.
+      - And analyzes it to determine the presence and position of a white ball.
       - If a white ball exists in the image, your node should request a service via a client to drive the robot towards it.
 
-##myrectory Structure
-```
-   - And roject1
-- model
-   - HumanoidRobot
-    myBuilding
-- script
-   - hello.cpp
-- world
-   - jin_world.world
-- CmakeLists.txt
 
+### Directory Structure
+```
+    .Project2                          # Go Chase It Project
+    ├── my_robot                       # my_robot package                   
+    │   ├── launch                     # launch folder for launch files   
+    │   │   ├── robot_description.launch
+    │   │   ├── world.launch
+    │   ├── meshes                     # meshes folder for sensors
+    │   │   ├── hokuyo.dae
+    │   ├── urdf                       # urdf folder for xarco files
+    │   │   ├── my_robot.gazebo
+    │   │   ├── my_robot.xacro
+    │   ├── world                      # world folder for world files
+    │   │   ├── <yourworld>.world
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info
+    ├── ball_chaser                    # ball_chaser package                   
+    │   ├── launch                     # launch folder for launch files   
+    │   │   ├── ball_chaser.launch
+    │   ├── src                        # source folder for C++ scripts
+    │   │   ├── drive_bot.cpp
+    │   │   ├── process_images.cpp
+    │   ├── srv                        # service folder for ROS services
+    │   │   ├── DriveToTarget.srv
+    │   ├── CMakeLists.txt             # compiler instructions
+    │   ├── package.xml                # package info                  
+    └── my ball                        # my ball gazebo model      
 ```
 
 ### Steps to launch the simulation
@@ -38,27 +54,42 @@ $ sudo apt-get upgrade -y
 #### Step 2 Clone the lab folder in /home/workspace/
 ```sh
 $ cd /home/workspace/
-$ git clone https://github.com/samchiRobot/Udacity_RoboticsEngineer/tree/master/project1
+$ git clone https://github.com/samchiRobot/Udacity_RoboticsEngineer/
 ```
 
-#### Step 3 Compile the code
+#### Step 3 Compile the code by catkin
 ```sh
-$ cd /home/workspace/project1/build/
-$ cmake ../
-$ make
+$ cd /home/workspace/project2/
+$ catkin_make
 ```
 
-#### Step 4 Add the library path to the Gazebo plugin path  
+#### Step 4 Launch the robot inside my world
 ```sh
-$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/project1/build
+$ cd /home/workspace/project2/
+$ source devel/setup.bash
+$ roslaunch my_robot world.launch
 ```
 
-#### Step 5 Run the Gazebo World file  
+#### Step 5 Run the `drive_bot` and `process_image` node
+
+Open new terminal
+
 ```sh
-$ cd /home/workspace/project1/world/
-$ gazebo jin_world
+$ cd /home/workspace/project2/
+$ source devel/setup.bash
+$ roslaunch ball_chaser ball_chaser.launch
 ```
+#### Step 6 Visualize camera images 
+
+Open new terminal
+
+```sh
+$ cd /home/workspace/project2/
+$ source devel/setup.bash
+$ rosrun rqt_image_view rqt_image_view  
+```
+
 
 ### Output
-Gazebo World should both launch as follow
+My program should both launch as follow
 ![alt text](images/project1_output.png)
