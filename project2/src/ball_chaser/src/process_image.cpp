@@ -8,8 +8,6 @@ ros::ServiceClient client;
 // This function calls the command_robot service to drive the robot in the specified direction
 void drive_robot(float lin_x, float ang_z)
 {
-    // TODO: Request a service and pass the velocities to it to drive the robot
-//    ROS_INFO_STREAM("Robot is driving...");
     ball_chaser::DriveToTarget srv;
     srv.request.linear_x = lin_x;
     srv.request.angular_z = ang_z;
@@ -28,17 +26,13 @@ void process_image_callback(const sensor_msgs::Image img)
     int lRange = img.width/3;
     int rRange = img.width*2/3;
 
-//    int lRange = 266;
-//    int rRange = 533;
-
     int i;
     int pPos = 0;   // pixel position in row
-    int selPos = 0; // 
-    int lCnt = 0;   //  num of white_pixel (left)
-    int fCnt = 0;   //  num of white_pixel (forward)
-    int rCnt = 0;   //  num of white_pixel (right)
+    int selPos = 0; // select position (left, forward, right)
+    int lCnt = 0;   // num of white_pixel (left)
+    int fCnt = 0;   // num of white_pixel (forward)
+    int rCnt = 0;   // num of white_pixel (right)
 
-    // TODO: Loop through each pixel in the image and check if there's a bright white one
     // Then, identify if this pixel falls in the left, mid, or right side of the image
     for(i=0;i<img.height*img.step;i += 3)
     {
@@ -55,7 +49,7 @@ void process_image_callback(const sensor_msgs::Image img)
         }
     }
     
-    // Depending on the white ball position, call the drive_bot function and pass velocities to it
+    // Drive robot ()depending on the white ball position)
     if(lCnt+rCnt+fCnt>0)
     {
         selPos = lCnt > rCnt ? (lCnt > fCnt ? lCnt : fCnt) : (rCnt > fCnt ? rCnt : fCnt);
