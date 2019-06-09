@@ -25,8 +25,10 @@
     │   ├── meshes                     # meshes folder for sensors
     │   │   ├── hokuyo.dae
     │   ├── urdf                       # urdf folder for xarco files
-    │   │   ├── my_robot.gazebo
-    │   │   ├── my_robot.xacro
+    │   │   ├── my_robot.gazebo        # my robot model
+    │   │   ├── my_robot.xacro         # my robot model
+    │   │   ├── my_robot(original).gazebo
+    │   │   ├── my_robot(original).xacro
     │   ├── world                      # world folder for world files
     │   │   ├── <yourworld>.world
     │   ├── CMakeLists.txt             # compiler instructions
@@ -92,4 +94,4 @@ $ rosrun rqt_image_view rqt_image_view
 
 ### Output
 My program should both launch as follow
-![alt text](images/project1_output.png)
+![alt text](images/project2_output.png)
