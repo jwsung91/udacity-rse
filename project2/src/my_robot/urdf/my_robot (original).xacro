@@ -3,15 +3,15 @@
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <gazebo reference="left_wheel">
-      <material>Gazebo/Gray</material>
+      <material>Gazebo/Grey</material>
   </gazebo>
 
   <gazebo reference="right_wheel">
-      <material>Gazebo/Gray</material>
+      <material>Gazebo/Grey</material>
   </gazebo>
 
   <gazebo reference="camera">
-      <material>Gazebo/Black</material>
+      <material>Gazebo/Blue</material>
   </gazebo>
 
   <gazebo reference="chassis">
@@ -28,7 +28,7 @@
   </joint>
 
   <link name='chassis'>
-    <pose>0 0 0.1 0 0 0</pose>
+    <pose>0 0 0.2 0 0 0</pose>
 
     <inertial>
       <mass value="15.0"/>
@@ -40,17 +40,17 @@
       />
     </inertial>
 
-    <collision name='collision'>
+    <collision name='chassis_collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <cylinder radius="0.25" length="0.15"/>
+        <cylinder radius=".25" length="0.2"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <cylinder radius="0.25" length="0.15"/>
+        <cylinder radius=".4" length="0.2"/>
       </geometry>
     </visual>
 
@@ -58,7 +58,7 @@
     <collision name='back_caster_collision'>
       <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0999"/>
+        <sphere radius="0.1"/>
       </geometry>
     </collision>
 
@@ -72,7 +72,7 @@
     <collision name='front_caster_collision'>
       <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0999"/>
+        <sphere radius="0.1"/>
       </geometry>
     </collision>
 
@@ -109,7 +109,7 @@
     </link>
 
     <joint type="continuous" name="left_wheel_hinge">
-      <origin xyz="0 0.175 0" rpy="0 0 0"/>
+      <origin xyz="0 0.2 0" rpy="0 0 0"/>
       <child link="left_wheel"/>
       <parent link="chassis"/>
       <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -142,7 +142,7 @@
     </link>
 
     <joint type="continuous" name="right_wheel_hinge">
-      <origin xyz="0 -0.175 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.2 0" rpy="0 0 0"/>
       <child link="right_wheel"/>
       <parent link="chassis"/>
       <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -213,4 +213,3 @@
     </joint>
 
 </robot>
-
