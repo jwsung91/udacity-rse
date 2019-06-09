@@ -1,2 +1,0 @@
-my_robot
--DCATKIN_DEVEL_PREFIX=/home/sung/git/Udacity_RoboticsEngineer/project2/devel -DCMAKE_INSTALL_PREFIX=/home/sung/git/Udacity_RoboticsEngineer/project2/install -G Unix Makefiles

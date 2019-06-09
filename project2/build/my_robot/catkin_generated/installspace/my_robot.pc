@@ -1,8 +1,0 @@
-prefix=/home/sung/git/Udacity_RoboticsEngineer/project2/install
-
-Name: my_robot
-Description: Description of my_robot
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/sung/git/Udacity_RoboticsEngineer/project2/install/lib 
-Requires: 
