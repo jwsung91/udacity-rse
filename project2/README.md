@@ -30,7 +30,7 @@
     │   │   ├── my_robot(original).gazebo
     │   │   ├── my_robot(original).xacro
     │   ├── world                      # world folder for world files
-    │   │   ├── <yourworld>.world
+    │   │   ├── jin.world
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
     ├── ball_chaser                    # ball_chaser package                   
