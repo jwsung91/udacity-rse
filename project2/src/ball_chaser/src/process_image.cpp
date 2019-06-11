@@ -63,7 +63,7 @@ void process_image_callback(const sensor_msgs::Image img)
         }
         if(selPos==fCnt)
         {
-            drive_robot(0.3, 0.0);  //  move forward
+            drive_robot(1.0, 0.0);  //  move forward
         }
     }
     // Request a stop when there's no white ball seen by the camera
