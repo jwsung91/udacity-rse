@@ -1,8 +1,0 @@
-prefix=/home/sung/catkin_ws/UND_Robo/project3/install
-
-Name: ball_chaser
-Description: Description of ball_chaser
-Version: 0.0.0
-Cflags: -I/home/sung/catkin_ws/UND_Robo/project3/install/include
-Libs: -L/home/sung/catkin_ws/UND_Robo/project3/install/lib 
-Requires: 
