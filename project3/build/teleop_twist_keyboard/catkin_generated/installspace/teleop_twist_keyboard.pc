@@ -1,0 +1,8 @@
+prefix=/home/sung/catkin_ws/UND_Robo/project3/install
+
+Name: teleop_twist_keyboard
+Description: Description of teleop_twist_keyboard
+Version: 0.6.2
+Cflags: 
+Libs: -L/home/sung/catkin_ws/UND_Robo/project3/install/lib 
+Requires: 

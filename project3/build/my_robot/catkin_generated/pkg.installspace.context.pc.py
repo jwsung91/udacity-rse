@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "my_robot"
-PROJECT_SPACE_DIR = "/home/workspace/catkin_ws/src/UND_Robo/project3/install"
+PROJECT_SPACE_DIR = "/home/sung/catkin_ws/UND_Robo/project3/install"
 PROJECT_VERSION = "0.0.0"

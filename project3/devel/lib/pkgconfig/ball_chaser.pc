@@ -1,8 +1,8 @@
-prefix=/home/workspace/catkin_ws/src/UND_Robo/project3/devel
+prefix=/home/sung/catkin_ws/UND_Robo/project3/devel
 
 Name: ball_chaser
 Description: Description of ball_chaser
 Version: 0.0.0
-Cflags: -I/home/workspace/catkin_ws/src/UND_Robo/project3/devel/include
-Libs: -L/home/workspace/catkin_ws/src/UND_Robo/project3/devel/lib 
+Cflags: -I/home/sung/catkin_ws/UND_Robo/project3/devel/include
+Libs: -L/home/sung/catkin_ws/UND_Robo/project3/devel/lib 
 Requires: 
