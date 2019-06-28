@@ -78,5 +78,19 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 
 ### Output
+Simulated environment (as input)
+
+Gazebo
+
+![gazebo image](images/project4_gazebo_world.png)
+
+
 My program should both launch as follow
-![alt text](images/project4_output.png)
+
+Rviz
+
+![rviz image](images/project4_output_rviz.png)
+
+RTAB
+
+![RTAB image](images/project4_output_RTAB.png)
