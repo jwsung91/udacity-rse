@@ -1,8 +1,0 @@
-prefix=/home/sung/git/UND_Robo/project4/install
-
-Name: teleop_twist_keyboard
-Description: Description of teleop_twist_keyboard
-Version: 0.6.2
-Cflags: 
-Libs: -L/home/sung/git/UND_Robo/project4/install/lib 
-Requires: 

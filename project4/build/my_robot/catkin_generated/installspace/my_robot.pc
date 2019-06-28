@@ -1,8 +1,0 @@
-prefix=/home/sung/git/UND_Robo/project4/install
-
-Name: my_robot
-Description: Description of my_robot
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/sung/git/UND_Robo/project4/install/lib 
-Requires: 
