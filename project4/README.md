@@ -1,30 +1,23 @@
 ## Project 4. Map My World
-### TBD
 
 ### Project Aspect
-- `drive_bot`
+- `my_robot`
    - Create a `my_robot` ROS package
    - Design a differential drive robot with the Unified Robot Description Format
-   - Add two sensors to my robot : `Camera`, `LIDAR`
+   - Add two sensors to my robot : `RGBD Camera`, `LIDAR`
 - `world`
    - Which is created in `project 1` and `project 2`
-
+- `mapping`
+   - Create a 2D occupancy grid and 3D octomap from a simulated environment(`world`) using `my_robot` and `RTAB-Map` package
+   
 ### Directory Structure
 ```
-    .Project3                                 # Where Am I Project
+    .Project4                                 # Map My World Project
     ├── my_robot                              # my_robot package                   
-    │   ├── config                            # AMCL configuration files   
-    │   │   ├── base_local_planner_params.yaml
-    │   │   ├── costmap_common_params.yaml
-    │   │   ├── global_costmap_params.yaml
-    │   │   ├── local_costmap_params.yaml
     │   ├── launch                            # launch folder for launch files   
-    │   │   ├── amcl.launch                   # Adaptive MCL launch file
+    │   │   ├── mapping.launch                # RTAB-Map launch file
     │   │   ├── robot_description.launch
     │   │   ├── world.launch
-    │   ├── maps                              # map folder made 
-    │   │   ├── jin_world_map.pgm
-    │   │   ├── jin_world_map.yaml
     │   ├── meshes                            # meshes folder for sensors
     │   │   ├── hokuyo.dae
     │   ├── urdf                              # urdf folder for xarco files
@@ -35,7 +28,7 @@
     │   ├── CMakeLists.txt                    # compiler instructions
     │   ├── package.xml                       # package info
     ├── teleop_twist_keyboard                 # teleop_twist_keyboard package                   
-    └── amcl.rviz                             # rviz presets      
+    └── SLAM.rviz                             # rviz presets      
 ```
 
 ### Steps to launch the simulation
@@ -53,32 +46,32 @@ $ git clone https://github.com/samchiRobot/UND_Robo/
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd /home/workspace/project3/
+$ cd /home/workspace/project4/
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd /home/workspace/project3/
+$ cd /home/workspace/project4/
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
 
-#### Step 5 Run the `amcl` node
+#### Step 5 Run the `mapping` node
 
 Open new terminal
 
 ```sh
-$ cd /home/workspace/project3/
+$ cd /home/workspace/project4/
 $ source devel/setup.bash
-$ roslaunch my_robot amcl.launch
+$ roslaunch my_robot mapping.launch
 ```
 #### Step 6 Run teleop_twist_keyboard
 
 Open new terminal
 
 ```sh
-$ cd /home/workspace/project3/
+$ cd /home/workspace/project4/
 $ source devel/setup.bash
 $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
@@ -86,4 +79,4 @@ $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 ### Output
 My program should both launch as follow
-![alt text](images/project3_output.png)
+![alt text](images/project4_output.png)
