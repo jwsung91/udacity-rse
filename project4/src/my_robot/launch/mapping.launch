@@ -6,6 +6,7 @@
   <arg name="rgb_topic"   default="/camera/rgb/image_raw"/>
   <arg name="depth_topic" default="/camera/depth/image_raw"/>
   <arg name="camera_info_topic" default="/camera/rgb/camera_info"/>  
+  <arg name="odom_topic" default="/odom"/>
 
   <!-- Mapping Node -->
   <group ns="rtabmap">
@@ -23,6 +24,7 @@
       <remap from="rgb/image" to="$(arg rgb_topic)"/>
       <remap from="depth/image" to="$(arg depth_topic)"/>
       <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
+      <remap from="odom" to="$(arg odom_topic)"/>
 
       <!-- RTAB-Map Output -->
       <remap from="grid_map" to="/map"/>
@@ -64,6 +66,7 @@
         <remap from="depth/image"     to="$(arg depth_topic)"/>
         <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
         <remap from="scan"            to="/my_robot/laser/scan"/>
+        <remap from="odom" to="$(arg odom_topic)"/>
     </node>
 
   </group>
