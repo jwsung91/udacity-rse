@@ -76,6 +76,19 @@ $ source devel/setup.bash
 $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
+#### Step 7 Database Analysis 
+
+When mapping is set, terminal the node and you could find your map db file in the place. 
+
+```sh
+$ rtabmap-databaseViewer ~/.ros/rtabmap.db
+```
+
+#### (Optional) my DB link (for reference)
+
+https://drive.google.com/open?id=1lJZRVs_ovUhlSxjhALg9QfMWZRiTvgbT
+
+
 ### Output
 
 Simulated environment (as input)
@@ -86,10 +99,6 @@ Simulated environment (as input)
 
 My program should both launch as follow
 
-#### Rviz
-
-![rviz image](images/project4_rviz.png)
-
 #### RTAB
 
 ![RTAB image](images/project4_RTAB.png)
@@ -97,5 +106,3 @@ My program should both launch as follow
 #### RTAB_DB_viewer
 
 ![RTAB DB_image](images/project4_RTAB_DB_viewer.png)
-
-
