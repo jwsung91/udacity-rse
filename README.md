@@ -1,2 +1,2 @@
-# Udacity_RoboticsEngineer_NanoDegree
-Codes for Robotics Software Engineer Course in Udacity Inc. 
+# Udacity Robotics Software Engineer NanoDegree
+Projects for Robotics Software Engineer Course in Udacity Inc. 
