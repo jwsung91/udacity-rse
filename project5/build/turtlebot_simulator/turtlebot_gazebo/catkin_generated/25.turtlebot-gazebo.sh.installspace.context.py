@@ -30,4 +30,4 @@ PROJECT_NAME = 'turtlebot_gazebo'
 PROJECT_BINARY_DIR = '/home/samchi/workspace/UND_Robo/project5/build/turtlebot_simulator/turtlebot_gazebo'
 PROJECT_SOURCE_DIR = '/home/samchi/workspace/UND_Robo/project5/src/turtlebot_simulator/turtlebot_gazebo'
 
-PYTHON_EXECUTABLE = '/usr/bin/python2'
+PYTHON_EXECUTABLE = '/usr/bin/python'

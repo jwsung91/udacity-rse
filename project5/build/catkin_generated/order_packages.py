@@ -2,4 +2,4 @@
 source_root_dir = "/home/samchi/workspace/UND_Robo/project5/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/opt/ros/melodic".split(';') if "/opt/ros/melodic" != "" else []
+underlay_workspaces = "/home/samchi/workspace/UND_Robo/project5/devel;/opt/ros/kinetic".split(';') if "/home/samchi/workspace/UND_Robo/project5/devel;/opt/ros/kinetic" != "" else []

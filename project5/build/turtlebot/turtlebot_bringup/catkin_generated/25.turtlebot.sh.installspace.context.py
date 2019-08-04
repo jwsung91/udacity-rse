@@ -30,4 +30,4 @@ PROJECT_NAME = 'turtlebot_bringup'
 PROJECT_BINARY_DIR = '/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot_bringup'
 PROJECT_SOURCE_DIR = '/home/samchi/workspace/UND_Robo/project5/src/turtlebot/turtlebot_bringup'
 
-PYTHON_EXECUTABLE = '/usr/bin/python2'
+PYTHON_EXECUTABLE = '/usr/bin/python'

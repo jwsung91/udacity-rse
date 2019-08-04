@@ -1,0 +1,8 @@
+prefix=/home/samchi/workspace/UND_Robo/project5/devel
+
+Name: turtlebot_msgs
+Description: Description of turtlebot_msgs
+Version: 2.2.1
+Cflags: -I/home/samchi/workspace/UND_Robo/project5/devel/include
+Libs: -L/home/samchi/workspace/UND_Robo/project5/devel/lib 
+Requires: std_msgs sensor_msgs std_srvs message_runtime

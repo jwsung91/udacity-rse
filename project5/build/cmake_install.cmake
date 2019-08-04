@@ -32,12 +32,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -47,7 +42,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -59,7 +54,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 file(INSTALL DESTINATION "/home/samchi/workspace/UND_Robo/project5/install" TYPE PROGRAM FILES "/home/samchi/workspace/UND_Robo/project5/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -71,7 +66,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 file(INSTALL DESTINATION "/home/samchi/workspace/UND_Robo/project5/install" TYPE PROGRAM FILES "/home/samchi/workspace/UND_Robo/project5/build/catkin_generated/installspace/env.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/setup.bash;/home/samchi/workspace/UND_Robo/project5/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -86,7 +81,7 @@ file(INSTALL DESTINATION "/home/samchi/workspace/UND_Robo/project5/install" TYPE
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/setup.sh;/home/samchi/workspace/UND_Robo/project5/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -101,7 +96,7 @@ file(INSTALL DESTINATION "/home/samchi/workspace/UND_Robo/project5/install" TYPE
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/setup.zsh;/home/samchi/workspace/UND_Robo/project5/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -116,7 +111,7 @@ file(INSTALL DESTINATION "/home/samchi/workspace/UND_Robo/project5/install" TYPE
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
    "/home/samchi/workspace/UND_Robo/project5/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
@@ -133,17 +128,24 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/samchi/workspace/UND_Robo/project5/build/gtest/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/slam_gmapping/slam_gmapping/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_apps/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot_bringup/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot_capabilities/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_interactions/turtlebot_dashboard/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_simulator/turtlebot_gazebo/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_interactions/turtlebot_interactions/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_rapps/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_interactions/turtlebot_rviz_launchers/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_simulator/turtlebot_simulator/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_simulator/turtlebot_stage/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_simulator/turtlebot_stdr/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/slam_gmapping/gmapping/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_actions/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_calibration/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_interactions/turtlebot_interactive_markers/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_msgs/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_follower/cmake_install.cmake")
+  include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot_apps/turtlebot_navigation/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot_teleop/cmake_install.cmake")
   include("/home/samchi/workspace/UND_Robo/project5/build/turtlebot/turtlebot_description/cmake_install.cmake")
 
