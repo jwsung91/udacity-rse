@@ -6,6 +6,12 @@ sudo apt install ros-kinetic-openslam-gmapping
 
 sudo apt install ros-kinetic-teleop-*
 
+sudo apt install ros-kinetic-amcl
+
+sudo apt install ros-kinetic-move-base
+
+sudo apt install ros-kinetic-map-server
+
 turtlebot_navigation, turtlebot_msgs (added)
 
 ## if issue

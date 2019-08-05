@@ -10,6 +10,7 @@ xterm -e "source $workspace/devel/setup.bash"
 ## deploy a turtlebot in my environment
 xterm -e "roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$workspace/src/map/jin.world" &
 sleep 10
+
 ## perform SLAM
 xterm -e "roslaunch turtlebot_gazebo gmapping_demo.launch" &
 sleep 2
