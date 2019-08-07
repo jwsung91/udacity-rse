@@ -2,6 +2,8 @@
 
 sudo apt install xterm
 
+sudo apt isntall ros-kinetic-turtlebot-*
+
 sudo apt install ros-kinetic-openslam-gmapping
 
 sudo apt install ros-kinetic-teleop-*
