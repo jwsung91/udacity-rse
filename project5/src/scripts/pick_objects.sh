@@ -16,5 +16,5 @@ xterm -e "roslaunch turtlebot_rviz_launchers view_navigation.launch" &
 sleep 2
 
 ## pick up virtual objects
-xterm -e "rosrun pick_objects pick_objects"
+xterm -e "rosrun pick_objects pick_objects_node"
 sleep 2

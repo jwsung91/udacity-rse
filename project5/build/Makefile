@@ -296,19 +296,6 @@ _catkin_empty_exported_target/fast:
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
-# Target rules for targets named pick_objects
-
-# Build rule for target.
-pick_objects: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pick_objects
-.PHONY : pick_objects
-
-# fast build rule for target.
-pick_objects/fast:
-	$(MAKE) -f pick_objects/CMakeFiles/pick_objects.dir/build.make pick_objects/CMakeFiles/pick_objects.dir/build
-.PHONY : pick_objects/fast
-
-#=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_py
 
 # Build rule for target.
@@ -450,6 +437,19 @@ actionlib_msgs_generate_messages_eus: cmake_check_build_system
 actionlib_msgs_generate_messages_eus/fast:
 	$(MAKE) -f pick_objects/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make pick_objects/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named pick_objects_node
+
+# Build rule for target.
+pick_objects_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pick_objects_node
+.PHONY : pick_objects_node
+
+# fast build rule for target.
+pick_objects_node/fast:
+	$(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/build
+.PHONY : pick_objects_node/fast
 
 #=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_lisp
@@ -2671,7 +2671,6 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... _catkin_empty_exported_target"
-	@echo "... pick_objects"
 	@echo "... move_base_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_cpp"
@@ -2683,6 +2682,7 @@ help:
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... pick_objects_node"
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... actionlib_generate_messages_eus"

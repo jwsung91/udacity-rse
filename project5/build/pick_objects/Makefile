@@ -56,6 +56,16 @@ CMAKE_BINARY_DIR = /home/samchi/workspace/UND_Robo/project5/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,16 +122,6 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -164,21 +164,6 @@ preinstall/fast:
 depend:
 	cd /home/samchi/workspace/UND_Robo/project5/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-# Convenience name for target.
-pick_objects/CMakeFiles/pick_objects.dir/rule:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/pick_objects.dir/rule
-.PHONY : pick_objects/CMakeFiles/pick_objects.dir/rule
-
-# Convenience name for target.
-pick_objects: pick_objects/CMakeFiles/pick_objects.dir/rule
-
-.PHONY : pick_objects
-
-# fast build rule for target.
-pick_objects/fast:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects.dir/build.make pick_objects/CMakeFiles/pick_objects.dir/build
-.PHONY : pick_objects/fast
 
 # Convenience name for target.
 pick_objects/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
@@ -344,6 +329,21 @@ actionlib_msgs_generate_messages_eus: pick_objects/CMakeFiles/actionlib_msgs_gen
 actionlib_msgs_generate_messages_eus/fast:
 	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make pick_objects/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
 .PHONY : actionlib_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+pick_objects/CMakeFiles/pick_objects_node.dir/rule:
+	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/pick_objects_node.dir/rule
+.PHONY : pick_objects/CMakeFiles/pick_objects_node.dir/rule
+
+# Convenience name for target.
+pick_objects_node: pick_objects/CMakeFiles/pick_objects_node.dir/rule
+
+.PHONY : pick_objects_node
+
+# fast build rule for target.
+pick_objects_node/fast:
+	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/build
+.PHONY : pick_objects_node/fast
 
 # Convenience name for target.
 pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
@@ -636,7 +636,7 @@ src/pick_objects.o: src/pick_objects.cpp.o
 
 # target to build an object file
 src/pick_objects.cpp.o:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects.dir/build.make pick_objects/CMakeFiles/pick_objects.dir/src/pick_objects.cpp.o
+	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/src/pick_objects.cpp.o
 .PHONY : src/pick_objects.cpp.o
 
 src/pick_objects.i: src/pick_objects.cpp.i
@@ -645,7 +645,7 @@ src/pick_objects.i: src/pick_objects.cpp.i
 
 # target to preprocess a source file
 src/pick_objects.cpp.i:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects.dir/build.make pick_objects/CMakeFiles/pick_objects.dir/src/pick_objects.cpp.i
+	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/src/pick_objects.cpp.i
 .PHONY : src/pick_objects.cpp.i
 
 src/pick_objects.s: src/pick_objects.cpp.s
@@ -654,7 +654,7 @@ src/pick_objects.s: src/pick_objects.cpp.s
 
 # target to generate assembly for a file
 src/pick_objects.cpp.s:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects.dir/build.make pick_objects/CMakeFiles/pick_objects.dir/src/pick_objects.cpp.s
+	cd /home/samchi/workspace/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/src/pick_objects.cpp.s
 .PHONY : src/pick_objects.cpp.s
 
 # Help Target
@@ -663,13 +663,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... pick_objects"
 	@echo "... move_base_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_cpp"
@@ -681,6 +680,7 @@ help:
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_eus"
+	@echo "... pick_objects_node"
 	@echo "... move_base_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... actionlib_generate_messages_eus"

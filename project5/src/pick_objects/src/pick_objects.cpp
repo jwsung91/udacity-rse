@@ -6,7 +6,7 @@
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
 int main(int argc, char** argv){
-  // Initialize the pick_objects node
+  // Initialize the pick_objects
   ros::init(argc, argv, "pick_objects");
 
   //tell the action client that we want to spin a thread by default
@@ -31,8 +31,8 @@ int main(int argc, char** argv){
   goal_1.target_pose.pose.position.y = 5.0;
   goal_1.target_pose.pose.orientation.w = 1.0;
 
-  goal_2.target_pose.pose.position.x = -5.0;
-  goal_2.target_pose.pose.position.y = 2.0;
+  goal_2.target_pose.pose.position.x = 1.0;
+  goal_2.target_pose.pose.position.y = -3.0;
   goal_2.target_pose.pose.orientation.w = -1.0;
 
 
