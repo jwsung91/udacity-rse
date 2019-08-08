@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/samchi/workspace/UND_Robo/project5/src
+CMAKE_SOURCE_DIR = /home/samchi/catkin_ws/UND_Robo/project5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/samchi/workspace/UND_Robo/project5/build
+CMAKE_BINARY_DIR = /home/samchi/catkin_ws/UND_Robo/project5/build
 
 # Utility rule file for move_base_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build: move_
 .PHONY : pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 
 pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/samchi/workspace/UND_Robo/project5/build/pick_objects && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build/pick_objects && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/clean
 
 pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/workspace/UND_Robo/project5/src /home/samchi/workspace/UND_Robo/project5/src/pick_objects /home/samchi/workspace/UND_Robo/project5/build /home/samchi/workspace/UND_Robo/project5/build/pick_objects /home/samchi/workspace/UND_Robo/project5/build/pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/catkin_ws/UND_Robo/project5/src /home/samchi/catkin_ws/UND_Robo/project5/src/pick_objects /home/samchi/catkin_ws/UND_Robo/project5/build /home/samchi/catkin_ws/UND_Robo/project5/build/pick_objects /home/samchi/catkin_ws/UND_Robo/project5/build/pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : pick_objects/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/depend
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/samchi/workspace/UND_Robo/project5/src
+CMAKE_SOURCE_DIR = /home/samchi/catkin_ws/UND_Robo/project5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/samchi/workspace/UND_Robo/project5/build
+CMAKE_BINARY_DIR = /home/samchi/catkin_ws/UND_Robo/project5/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/samchi/workspace/UND_Robo/project5/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/samchi/workspace/UND_Robo/project5/build/test_results
+	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/samchi/catkin_ws/UND_Robo/project5/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/workspace/UND_Robo/project5/src /home/samchi/workspace/UND_Robo/project5/src /home/samchi/workspace/UND_Robo/project5/build /home/samchi/workspace/UND_Robo/project5/build /home/samchi/workspace/UND_Robo/project5/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/catkin_ws/UND_Robo/project5/src /home/samchi/catkin_ws/UND_Robo/project5/src /home/samchi/catkin_ws/UND_Robo/project5/build /home/samchi/catkin_ws/UND_Robo/project5/build /home/samchi/catkin_ws/UND_Robo/project5/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

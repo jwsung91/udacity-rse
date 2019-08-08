@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/samchi/workspace/UND_Robo/project5/src
+CMAKE_SOURCE_DIR = /home/samchi/catkin_ws/UND_Robo/project5/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/samchi/workspace/UND_Robo/project5/build
+CMAKE_BINARY_DIR = /home/samchi/catkin_ws/UND_Robo/project5/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_genera
 .PHONY : add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/samchi/workspace/UND_Robo/project5/build/add_markers && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build/add_markers && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/samchi/workspace/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/workspace/UND_Robo/project5/src /home/samchi/workspace/UND_Robo/project5/src/add_markers /home/samchi/workspace/UND_Robo/project5/build /home/samchi/workspace/UND_Robo/project5/build/add_markers /home/samchi/workspace/UND_Robo/project5/build/add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/samchi/catkin_ws/UND_Robo/project5/src /home/samchi/catkin_ws/UND_Robo/project5/src/add_markers /home/samchi/catkin_ws/UND_Robo/project5/build /home/samchi/catkin_ws/UND_Robo/project5/build/add_markers /home/samchi/catkin_ws/UND_Robo/project5/build/add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : add_markers/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 

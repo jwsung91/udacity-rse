@@ -1,8 +1,0 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/devel
-
-Name: turtlebot_follower
-Description: Description of turtlebot_follower
-Version: 2.3.7
-Cflags: -I/home/samchi/workspace/UND_Robo/project5/devel/include
-Libs: -L/home/samchi/workspace/UND_Robo/project5/devel/lib -lturtlebot_follower
-Requires: nodelet roscpp visualization_msgs turtlebot_msgs depth_image_proc dynamic_reconfigure

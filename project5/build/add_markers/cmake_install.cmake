@@ -1,8 +1,8 @@
-# Install script for directory: /home/samchi/workspace/UND_Robo/project5/src/add_markers
+# Install script for directory: /home/samchi/catkin_ws/UND_Robo/project5/src/add_markers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/samchi/workspace/UND_Robo/project5/install")
+  set(CMAKE_INSTALL_PREFIX "/home/samchi/catkin_ws/UND_Robo/project5/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/samchi/workspace/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markers.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/samchi/catkin_ws/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markers.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/add_markers/cmake" TYPE FILE FILES
-    "/home/samchi/workspace/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markersConfig.cmake"
-    "/home/samchi/workspace/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markersConfig-version.cmake"
+    "/home/samchi/catkin_ws/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markersConfig.cmake"
+    "/home/samchi/catkin_ws/UND_Robo/project5/build/add_markers/catkin_generated/installspace/add_markersConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/add_markers" TYPE FILE FILES "/home/samchi/workspace/UND_Robo/project5/src/add_markers/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/add_markers" TYPE FILE FILES "/home/samchi/catkin_ws/UND_Robo/project5/src/add_markers/package.xml")
 endif()
 

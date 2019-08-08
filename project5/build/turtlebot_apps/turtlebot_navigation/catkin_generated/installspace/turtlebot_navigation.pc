@@ -1,8 +1,0 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/install
-
-Name: turtlebot_navigation
-Description: Description of turtlebot_navigation
-Version: 2.3.7
-Cflags: 
-Libs: -L/home/samchi/workspace/UND_Robo/project5/install/lib 
-Requires: tf roscpp sensor_msgs

@@ -1,8 +1,0 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/install
-
-Name: turtlebot_actions
-Description: Description of turtlebot_actions
-Version: 2.3.7
-Cflags: -I/home/samchi/workspace/UND_Robo/project5/install/include
-Libs: -L/home/samchi/workspace/UND_Robo/project5/install/lib 
-Requires: roscpp actionlib actionlib_msgs geometry_msgs message_runtime tf cv_bridge image_transport image_geometry turtlebot_bringup

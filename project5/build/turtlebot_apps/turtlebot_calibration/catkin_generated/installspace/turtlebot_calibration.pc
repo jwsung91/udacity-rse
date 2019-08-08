@@ -1,8 +1,0 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/install
-
-Name: turtlebot_calibration
-Description: Description of turtlebot_calibration
-Version: 2.3.7
-Cflags: -I/home/samchi/workspace/UND_Robo/project5/install/include
-Libs: -L/home/samchi/workspace/UND_Robo/project5/install/lib 
-Requires: std_msgs message_runtime

@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/samchi/workspace/UND_Robo/project5/install/setup.sh
+    local-name: /home/samchi/catkin_ws/UND_Robo/project5/install/setup.sh

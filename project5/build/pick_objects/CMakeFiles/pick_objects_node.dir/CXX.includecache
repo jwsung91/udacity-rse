@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/samchi/workspace/UND_Robo/project5/src/pick_objects/src/pick_objects.cpp
+/home/samchi/catkin_ws/UND_Robo/project5/src/pick_objects/src/pick_objects.cpp
 ros/ros.h
 -
 move_base_msgs/MoveBaseAction.h

@@ -1,8 +1,0 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/devel
-
-Name: gmapping
-Description: Description of gmapping
-Version: 1.4.0
-Cflags: 
-Libs: -L/home/samchi/workspace/UND_Robo/project5/devel/lib 
-Requires: 

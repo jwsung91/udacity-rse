@@ -1,8 +1,8 @@
-prefix=/home/samchi/workspace/UND_Robo/project5/install
+prefix=/home/samchi/catkin_ws/UND_Robo/project5/install
 
 Name: add_markers
 Description: Description of add_markers
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/samchi/workspace/UND_Robo/project5/install/lib 
+Libs: -L/home/samchi/catkin_ws/UND_Robo/project5/install/lib 
 Requires: 
