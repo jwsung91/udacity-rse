@@ -12,5 +12,5 @@ xterm -e "roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$workspace/src/m
 sleep 2
 
 ## observe the map in rviz
-xterm -e "roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+xterm -e "roslaunch turtlebot_rviz_launchers view_navigation.launch"
 sleep 2
