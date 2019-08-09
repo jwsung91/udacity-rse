@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Set catkin_ws path
-workspace=~/workspace/UND_Robo/project5
-
 ## deploy a turtlebot in my environment
-xterm -e "roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$workspace/src/map/jin.world" &
+xterm -e "roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$(pwd)/../map/jin.world" &
 sleep 10
 
 ## perform SLAM
@@ -17,5 +14,3 @@ sleep 2
 
 ## manually control the robot
 xterm -e "roslaunch turtlebot_teleop keyboard_teleop.launch"
-
-
