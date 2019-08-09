@@ -4,8 +4,13 @@
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /home/samchi/catkin_ws/UND_Robo/project5/src/add_markers/src/add_markers.cpp
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Point.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose.h
+add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Pose2D.h
+add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/PoseWithCovariance.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Quaternion.h
+add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twist.h
+add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistWithCovariance.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
+add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/nav_msgs/Odometry.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/ros/advertise_options.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/ros/advertise_service_options.h
 add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.o: /opt/ros/kinetic/include/ros/assert.h

@@ -1,5 +1,16 @@
 #include <ros/ros.h>
 #include <visualization_msgs/Marker.h>
+#include "nav_msgs/Odometry.h"
+#include "geometry_msgs/Pose2D.h"
+
+geometry_msgs::Pose2D current_pose;
+
+void odomCallback(const nav_msgs::Odometry::ConstPtr& msg)
+{
+  current_pose.x = msg->pose.pose.position.x;
+  current_pose.y = msg->pose.pose.position.y;
+}
+
 
 int main( int argc, char** argv )
 {
@@ -7,6 +18,12 @@ int main( int argc, char** argv )
   ros::NodeHandle n;
   ros::Rate r(1);
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
+
+  bool reach = false;
+
+
+  // add odom subscriber
+  ros::Subscriber odom_sub = n.subscribe("/odom", 10, odomCallback);
 
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
