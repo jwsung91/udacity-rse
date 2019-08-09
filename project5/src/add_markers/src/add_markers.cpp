@@ -6,7 +6,7 @@
 #include <geometry_msgs/Pose2D.h>
 #include <tf/tf.h>
 
-#define REACH_DIST 0.2
+#define REACH_DIST 0.25
 
 geometry_msgs::Pose2D current_pose;
 
@@ -40,17 +40,8 @@ int main( int argc, char** argv )
   float dist_x = 0;
   float dist_y = 0;
 
-  // add odom subscriber
+  // add odometry subscriber
   ros::Subscriber odom_sub = n.subscribe("/odom", 1, odomCallback);
-
-  //
-  ros::Publisher pose_pub = n.advertise<geometry_msgs::Pose2D>("robot_pose",1);
-  ros::Publisher diff_pub = n.advertise<geometry_msgs::Pose2D>("diff_pose",1);
-  ros::Publisher goal_pub = n.advertise<geometry_msgs::Pose2D>("goal_pose",1);
-  geometry_msgs::Pose2D diff;
-  geometry_msgs::Pose2D goal;
-  //
-
 
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::CUBE;
@@ -80,7 +71,6 @@ int main( int argc, char** argv )
   marker.pose.position.x = goals[goal_num][0];
   marker.pose.position.y = goals[goal_num][1];
 
-
   // Set the scale of the marker -- 1x1x1 here means 1m on a side
   marker.scale.x = 0.3;
   marker.scale.y = 0.3;
@@ -103,18 +93,13 @@ int main( int argc, char** argv )
       {
         return 0;
       }
-      ROS_WARN_ONCE("Please create a subscriber to the marker");
+      // ROS_WARN_ONCE("Please create a subscriber to the marker");
       sleep(1);
     }
     
-    goal.x = goals[goal_num][0];
-    goal.y = goals[goal_num][1];
-    
-    diff.x = fabs(goals[goal_num][0]-current_pose.x);
-    diff.y = fabs(goals[goal_num][1]-current_pose.y);
-    
     dist_x = fabs(goals[goal_num][0]-current_pose.x);
     dist_y = fabs(goals[goal_num][1]-current_pose.y);
+    
     if(!load_flag)
     {
       marker_pub.publish(marker);
@@ -127,24 +112,20 @@ int main( int argc, char** argv )
         load_flag = true;
       }
     }
+
     else
     {
       if((dist_x<=REACH_DIST)&&(dist_y<=REACH_DIST))
       {
-          ROS_INFO_ONCE("phase 3 : Publish the marker at the drop off zone");
+        ROS_INFO_ONCE("phase 3 : Publish the marker at the drop off zone");
         marker.action = visualization_msgs::Marker::ADD;
-          marker.pose.position.x = goals[goal_num][0];
-      marker.pose.position.y = goals[goal_num][1];
-
+        marker.pose.position.x = goals[goal_num][0];
+        marker.pose.position.y = goals[goal_num][1];
         marker_pub.publish(marker);
         return 0;
       }
     }
     marker_pub.publish(marker);
-
-    pose_pub.publish(current_pose);
-    diff_pub.publish(diff);
-    goal_pub.publish(goal);
 
     ros::spinOnce();
     r.sleep();
