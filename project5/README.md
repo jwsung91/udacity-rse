@@ -20,16 +20,22 @@ sudo apt install ros-kinetic-map-server
    - Add a marker assumed to be an object
       - Phase 1. Create Marker at Destination 1
       - Phase 2. Delete Objects
-      - Phase 3. Create Marker at Destination 2
+      - Phase 3. Create Marker at Destination 2    
 - `pick_objects`
    - Robot Teleoperation algorithm for Two Destinations
 - `scripts`
    - To launch multiple roslaunch command and set the params
-      - `add_marker.sh` : marker test program (If you want to test this shell script, you need to modify add_markers copy.cpp in add_marker package to add_markers.cpp)
-      - `home_service.sh` : main program
       - `launch.sh` : shell script test program
+      - `add_marker.sh` : marker test program (If you want to test this shell script, you need to modify add_markers copy.cpp in add_marker package to add_markers.cpp)
+      ![add_markers image](images/add_markers.png)
+      - `pick_objects.sh` : teleoperation test program
+      ![pick_objects image](images/pick_objects.png)
+      - `home_service.sh` : main program
+      ![home_service image](images/home_service.png)
       - `test_navigation.sh` : amcl test program
+      ![test_navigation image](images/test_navigation.png)
       - `test_slam.sh` : gmapping test program
+      ![test_slam image](images/test_slam.png)
    
 ### Directory Structure
 ```
