@@ -6,7 +6,8 @@
 
 ```
 sudo apt install xterm
-sudo apt isntall ros-kinetic-turtlebot-*
+sudo apt install ros-kinetic-turtlebot
+sudo apt install ros-kinetic-turtlebot-*
 sudo apt install ros-kinetic-openslam-gmapping
 sudo apt install ros-kinetic-teleop-*
 sudo apt install ros-kinetic-amcl
@@ -33,24 +34,38 @@ sudo apt install ros-kinetic-map-server
 ### Directory Structure
 ```
     .Project5                                 # Home Service Robot Project
-    ├── add_markers                              # my_robot package                   
+    ├── add_markers                           # add_markers package                   
     │   ├── launch                            # launch folder for launch files   
-    │   │   ├── home_robot.rviz                # RTAB-Map launch file
-    │   │   ├── set_goal.launch
-    │   ├── src                            # meshes folder for sensors
-    │   │   ├── add_markers copy.cpp
-    │   │   ├── add_markers.cpp
+    │   │   ├── home_robot.rviz               # rviz preset for home_service.sh
+    │   │   ├── set_goal.launch               # launch file for home_service.sh
+    │   ├── src                            
+    │   │   ├── add_markers copy.cpp          # marker test code (for add_marker.sh)
+    │   │   ├── add_markers.cpp               # marker test code (for home_service.sh)
     │   ├── CMakeLists.txt                    # compiler instructions
     │   ├── package.xml                       # package info
-    ├── map                 # teleop_twist_keyboard package                   
-    ├── pick_objects                 # teleop_twist_keyboard package                   
-    ├── scripts                 # teleop_twist_keyboard package                   
-    ├── slam_gmapping                 # teleop_twist_keyboard package                   
-    ├── turtlebot                 # teleop_twist_keyboard package                   
-    ├── turtlebot_apps                 # teleop_twist_keyboard package                   
-    ├── turtlebot_interactions                 # teleop_twist_keyboard package                   
-    ├── turtlebot_msgs                 # teleop_twist_keyboard package                   
-    └── turtlebot_simulator                             # rviz presets      
+    ├── map                                   # gazebo world file + pgm file                   
+    │   ├── empty.world                       # test world file   
+    │   ├── jin.world                         # my gazebo world file   
+    │   ├── jin_world_map.pgm                 # my gazebo map file   
+    │   ├── jin_world_map.yaml                # my gazebo map preset   
+    ├── pick_objects                          # robot teleoperation package                   
+    │   ├── src
+    │   │   ├── pick_objects.cpp              # teleoperation test code
+    │   ├── CMakeLists.txt                    # compiler instructions
+    │   ├── package.xml                       # package info
+    ├── scripts                               # shell script files                   
+    │   │   ├── add_marker.sh
+    │   │   ├── home_service.sh
+    │   │   ├── launch.sh
+    │   │   ├── pick_objects.sh
+    │   │   ├── test_navigation.sh
+    │   │   ├── test_slam.sh
+    ├── slam_gmapping                        # SLAM package                   
+    ├── turtlebot                            # turtlebot package (for teleop)                  
+    ├── turtlebot_apps                       # teleop_twist_keyboard package                   
+    ├── turtlebot_interactions               # for turtlebot_rviz_launchers                  
+    ├── turtlebot_msgs                       # prerequisites                   
+    └── turtlebot_simulator                  # for turtlebot_gazebo
 ```
 
 ### Steps to launch the simulation
@@ -69,116 +84,29 @@ $ git clone https://github.com/samchiRobot/UND_Robo/
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd /home/workspace/project5/
+$ cd ~/workspace/UND_Robo/project5/
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd /home/workspace/project5/
+$ cd ~/workspace/UND_Robo/project5/
 $ source devel/setup.bash
 ```
 
-#### Step 5 Run the `mapping` node
-
-Open new terminal
-
+#### Step 5 Launch shell script file
 ```sh
-$ cd /home/workspace/project4/
-$ source devel/setup.bash
-$ roslaunch my_robot mapping.launch
-```
-#### Step 6 Run teleop_twist_keyboard
-
-Open new terminal
-
-```sh
-$ cd /home/workspace/project4/
-$ source devel/setup.bash
-$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+$ cd ~/workspace/UND_Robo/project5/src/scripts
+$ ./home_service.sh
 ```
 
-#### Step 7 Database Analysis 
+## How to solve the problem
 
-When mapping is set, terminal the node and you could find your map db file in the place. 
+### kobuki_description issue
 
 ```sh
-$ rtabmap-databaseViewer ~/.ros/rtabmap.db
-```
-
-#### (Optional) my DB link (for reference)
-
-https://drive.google.com/open?id=1lJZRVs_ovUhlSxjhALg9QfMWZRiTvgbT
-
-
-### Output
-
-Simulated environment (as input)
-#### Gazebo
-
-![gazebo image](images/project4_world.png)
-
-
-My program should both launch as follow
-
-#### RTAB
-
-![RTAB image](images/project4_RTAB.png)
-
-#### RTAB_DB_viewer
-
-![RTAB DB_image](images/project4_RTAB_DB_viewer.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## prereq.
-
-sudo apt install xterm
-sudo apt isntall ros-kinetic-turtlebot-*
-sudo apt install ros-kinetic-openslam-gmapping
-sudo apt install ros-kinetic-teleop-*
-sudo apt install ros-kinetic-amcl
-sudo apt install ros-kinetic-move-base
-sudo apt install ros-kinetic-map-server
-
-turtlebot_navigation, turtlebot_msgs (added)
-
-## if issue
-
-1. kobuki_description issue
-
 sudo apt-get remove turtlebot-*
-
 sudo apt-get remove kobuki-*
-
 sudo apt-get install ros-kinetic-turtlebot
-
+```
 
