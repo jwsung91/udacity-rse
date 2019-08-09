@@ -83,26 +83,26 @@ $ sudo apt-get upgrade -y
 
 #### Step 2 Clone the lab folder in ~/workspace/
 ```sh
-$ mkdir ~/workspace
-$ cd ~/workspace
+$ mkdir ~/catkin_ws
+$ cd ~/catkin_ws
 $ git clone https://github.com/samchiRobot/UND_Robo/
 ```
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd ~/workspace/UND_Robo/project5/
+$ cd ~/catkin_ws/UND_Robo/project5/
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd ~/workspace/UND_Robo/project5/
+$ cd ~/catkin_ws/UND_Robo/project5/
 $ source devel/setup.bash
 ```
 
 #### Step 5 Launch shell script file
 ```sh
-$ cd ~/workspace/UND_Robo/project5/src/scripts
+$ cd ~/catkin_ws/UND_Robo/project5/src/scripts
 $ ./home_service.sh
 ```
 
