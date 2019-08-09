@@ -12,8 +12,9 @@ geometry_msgs::Pose2D current_pose;
 
 void odomCallback(const nav_msgs::Odometry::ConstPtr msg)
 {
-  current_pose.x = msg->pose.pose.position.x;
-  current_pose.y = msg->pose.pose.position.y;
+  // initial set for robot rotation (90 deg)
+  current_pose.x = msg->pose.pose.position.y;
+  current_pose.y = msg->pose.pose.position.x*(-1);
 
   tf::Quaternion q(
     msg->pose.pose.orientation.x,
@@ -78,11 +79,7 @@ int main( int argc, char** argv )
   marker.action = visualization_msgs::Marker::ADD;
   marker.pose.position.x = goals[goal_num][0];
   marker.pose.position.y = goals[goal_num][1];
-  marker.pose.position.z = 0.0;
-  marker.pose.orientation.x = 0.0;
-  marker.pose.orientation.y = 0.0;
-  marker.pose.orientation.z = 0.0;
-  marker.pose.orientation.w = 1.0;
+
 
   // Set the scale of the marker -- 1x1x1 here means 1m on a side
   marker.scale.x = 0.3;
@@ -123,6 +120,7 @@ int main( int argc, char** argv )
       marker_pub.publish(marker);
       if((dist_x<=REACH_DIST)&&(dist_y<=REACH_DIST))
       {
+          ROS_INFO_ONCE("phase 2 : Remove the marker");
         marker.action = visualization_msgs::Marker::DELETE;
         marker_pub.publish(marker);
         goal_num++;     
@@ -133,8 +131,13 @@ int main( int argc, char** argv )
     {
       if((dist_x<=REACH_DIST)&&(dist_y<=REACH_DIST))
       {
+          ROS_INFO_ONCE("phase 3 : Publish the marker at the drop off zone");
         marker.action = visualization_msgs::Marker::ADD;
+          marker.pose.position.x = goals[goal_num][0];
+      marker.pose.position.y = goals[goal_num][1];
+
         marker_pub.publish(marker);
+        return 0;
       }
     }
     marker_pub.publish(marker);
@@ -143,12 +146,7 @@ int main( int argc, char** argv )
     diff_pub.publish(diff);
     goal_pub.publish(goal);
 
-    if(phase>3){
-        while(1)
-        {}
-    }
     ros::spinOnce();
-
     r.sleep();
   }
 }
