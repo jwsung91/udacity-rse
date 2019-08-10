@@ -6,7 +6,7 @@
 #include <geometry_msgs/Pose2D.h>
 #include <tf/tf.h>
 
-#define REACH_DIST 0.25
+#define REACH_DIST 0.4
 
 geometry_msgs::Pose2D current_pose;
 
