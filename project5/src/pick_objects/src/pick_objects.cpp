@@ -66,7 +66,6 @@ int main(int argc, char** argv){
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
   {
     ROS_INFO("Robot dropped the virtual object");
-    sleep(5);    //Wait for 5 seconds
   }
   else
   {
