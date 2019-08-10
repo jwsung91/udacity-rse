@@ -20,7 +20,8 @@ sudo apt install ros-kinetic-map-server
    - Add a marker assumed to be an object
       - Phase 1. Create Marker at Destination 1
       - Phase 2. Delete Objects
-      - Phase 3. Create Marker at Destination 2    
+      - Phase 3. Create Marker at Destination 2
+   - Nodes are created separately according to the `.sh` file using this package 
 - `pick_objects`
    - Robot Teleoperation algorithm for Two Destinations
 - `scripts`
@@ -45,8 +46,8 @@ sudo apt install ros-kinetic-map-server
     │   │   ├── home_robot.rviz               # rviz preset for home_service.sh
     │   │   ├── set_goal.launch               # launch file for home_service.sh
     │   ├── src                            
-    │   │   ├── add_markers copy.cpp          # marker test code (for add_marker.sh)
-    │   │   ├── add_markers.cpp               # marker test code (for home_service.sh)
+    │   │   ├── add_markers_robot.cpp          # marker test code (for home_service.sh)
+    │   │   ├── add_markers.cpp               # marker test code (for add_marker.sh)
     │   ├── CMakeLists.txt                    # compiler instructions
     │   ├── package.xml                       # package info
     ├── map                                   # gazebo world file + pgm file                   
