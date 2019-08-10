@@ -1,0 +1,8 @@
+prefix=/home/samchi/catkin_ws/UND_Robo/project5/install
+
+Name: turtlebot_gazebo
+Description: Description of turtlebot_gazebo
+Version: 2.2.3
+Cflags: 
+Libs: -L/home/samchi/catkin_ws/UND_Robo/project5/install/lib 
+Requires: 

@@ -451,6 +451,21 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+add_markers/CMakeFiles/add_markers_robot_node.dir/rule:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 add_markers/CMakeFiles/add_markers_robot_node.dir/rule
+.PHONY : add_markers/CMakeFiles/add_markers_robot_node.dir/rule
+
+# Convenience name for target.
+add_markers_robot_node: add_markers/CMakeFiles/add_markers_robot_node.dir/rule
+
+.PHONY : add_markers_robot_node
+
+# fast build rule for target.
+add_markers_robot_node/fast:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f add_markers/CMakeFiles/add_markers_robot_node.dir/build.make add_markers/CMakeFiles/add_markers_robot_node.dir/build
+.PHONY : add_markers_robot_node/fast
+
+# Convenience name for target.
 add_markers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
 	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 add_markers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : add_markers/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
@@ -582,6 +597,33 @@ src/add_markers.cpp.s:
 	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f add_markers/CMakeFiles/add_markers_node.dir/build.make add_markers/CMakeFiles/add_markers_node.dir/src/add_markers.cpp.s
 .PHONY : src/add_markers.cpp.s
 
+src/add_markers_robot.o: src/add_markers_robot.cpp.o
+
+.PHONY : src/add_markers_robot.o
+
+# target to build an object file
+src/add_markers_robot.cpp.o:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f add_markers/CMakeFiles/add_markers_robot_node.dir/build.make add_markers/CMakeFiles/add_markers_robot_node.dir/src/add_markers_robot.cpp.o
+.PHONY : src/add_markers_robot.cpp.o
+
+src/add_markers_robot.i: src/add_markers_robot.cpp.i
+
+.PHONY : src/add_markers_robot.i
+
+# target to preprocess a source file
+src/add_markers_robot.cpp.i:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f add_markers/CMakeFiles/add_markers_robot_node.dir/build.make add_markers/CMakeFiles/add_markers_robot_node.dir/src/add_markers_robot.cpp.i
+.PHONY : src/add_markers_robot.cpp.i
+
+src/add_markers_robot.s: src/add_markers_robot.cpp.s
+
+.PHONY : src/add_markers_robot.s
+
+# target to generate assembly for a file
+src/add_markers_robot.cpp.s:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f add_markers/CMakeFiles/add_markers_robot_node.dir/build.make add_markers/CMakeFiles/add_markers_robot_node.dir/src/add_markers_robot.cpp.s
+.PHONY : src/add_markers_robot.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -614,6 +656,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... add_markers_robot_node"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_lisp"
@@ -624,6 +667,9 @@ help:
 	@echo "... src/add_markers.o"
 	@echo "... src/add_markers.i"
 	@echo "... src/add_markers.s"
+	@echo "... src/add_markers_robot.o"
+	@echo "... src/add_markers_robot.i"
+	@echo "... src/add_markers_robot.s"
 .PHONY : help
 
 

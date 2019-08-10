@@ -66,18 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -132,6 +120,18 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -241,51 +241,6 @@ move_base_msgs_generate_messages_py/fast:
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/build.make pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-.PHONY : pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-move_base_msgs_generate_messages_lisp: pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : move_base_msgs_generate_messages_lisp
-
-# fast build rule for target.
-move_base_msgs_generate_messages_lisp/fast:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
-.PHONY : move_base_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-pick_objects/CMakeFiles/pick_objects_node.dir/rule:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/pick_objects_node.dir/rule
-.PHONY : pick_objects/CMakeFiles/pick_objects_node.dir/rule
-
-# Convenience name for target.
-pick_objects_node: pick_objects/CMakeFiles/pick_objects_node.dir/rule
-
-.PHONY : pick_objects_node
-
-# fast build rule for target.
-pick_objects_node/fast:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/build
-.PHONY : pick_objects_node/fast
-
-# Convenience name for target.
 pick_objects/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
 	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
 .PHONY : pick_objects/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
@@ -391,19 +346,49 @@ move_base_msgs_generate_messages_nodejs/fast:
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/rule
+pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/rule
+actionlib_generate_messages_eus: pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
-.PHONY : _catkin_empty_exported_target
+.PHONY : actionlib_generate_messages_eus
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/build.make pick_objects/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+actionlib_generate_messages_eus/fast:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/build.make pick_objects/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+.PHONY : pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_lisp: pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make pick_objects/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+pick_objects/CMakeFiles/pick_objects_node.dir/rule:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f CMakeFiles/Makefile2 pick_objects/CMakeFiles/pick_objects_node.dir/rule
+.PHONY : pick_objects/CMakeFiles/pick_objects_node.dir/rule
+
+# Convenience name for target.
+pick_objects_node: pick_objects/CMakeFiles/pick_objects_node.dir/rule
+
+.PHONY : pick_objects_node
+
+# fast build rule for target.
+pick_objects_node/fast:
+	cd /home/samchi/catkin_ws/UND_Robo/project5/build && $(MAKE) -f pick_objects/CMakeFiles/pick_objects_node.dir/build.make pick_objects/CMakeFiles/pick_objects_node.dir/build
+.PHONY : pick_objects_node/fast
 
 # Convenience name for target.
 pick_objects/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
@@ -454,16 +439,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_py"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... move_base_msgs_generate_messages_lisp"
-	@echo "... pick_objects_node"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
@@ -472,11 +453,14 @@ help:
 	@echo "... test"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... move_base_msgs_generate_messages_nodejs"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... pick_objects_node"
 	@echo "... install/strip"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... install/local"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... rebuild_cache"
+	@echo "... install"
 	@echo "... src/pick_objects.o"
 	@echo "... src/pick_objects.i"
 	@echo "... src/pick_objects.s"

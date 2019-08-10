@@ -13,7 +13,7 @@ xterm -e "roslaunch add_markers set_goal.launch" &
 sleep 2
 
 ## add markers
-xterm -e "rosrun add_markers add_markers_node" &
+xterm -e "rosrun add_markers add_markers_robot_node" &
 sleep 2
 
 ## pick up virtual objects

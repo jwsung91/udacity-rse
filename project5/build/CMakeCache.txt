@@ -377,6 +377,30 @@ rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 
+//Value Computed by CMake
+turtlebot_gazebo_BINARY_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/build/turtlebot_simulator/turtlebot_gazebo
+
+//Value Computed by CMake
+turtlebot_gazebo_SOURCE_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/src/turtlebot_simulator/turtlebot_gazebo
+
+//Value Computed by CMake
+turtlebot_simulator_BINARY_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/build/turtlebot_simulator/turtlebot_simulator
+
+//Value Computed by CMake
+turtlebot_simulator_SOURCE_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/src/turtlebot_simulator/turtlebot_simulator
+
+//Value Computed by CMake
+turtlebot_stage_BINARY_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/build/turtlebot_simulator/turtlebot_stage
+
+//Value Computed by CMake
+turtlebot_stage_SOURCE_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/src/turtlebot_simulator/turtlebot_stage
+
+//Value Computed by CMake
+turtlebot_stdr_BINARY_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/build/turtlebot_simulator/turtlebot_stdr
+
+//Value Computed by CMake
+turtlebot_stdr_SOURCE_DIR:STATIC=/home/samchi/catkin_ws/UND_Robo/project5/src/turtlebot_simulator/turtlebot_stdr
+
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
 
@@ -485,7 +509,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

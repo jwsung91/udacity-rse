@@ -31,7 +31,7 @@ void odomCallback(const nav_msgs::Odometry::ConstPtr msg)
 
 int main( int argc, char** argv )
 {
-  ros::init(argc, argv, "add_markers_node");
+  ros::init(argc, argv, "add_markers_robot_node");
   ros::NodeHandle n;
   ros::Rate r(1);
   ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
