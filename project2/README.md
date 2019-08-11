@@ -55,19 +55,20 @@ $ sudo apt-get upgrade -y
 
 #### Step 2 Clone the lab folder in /home/workspace/
 ```sh
-$ cd /home/workspace/
-$ git clone https://github.com/samchiRobot/Udacity_RoboticsEngineer/
+$ mkdir ~/catkin_ws
+$ cd ~/catkin_ws
+$ git clone https://github.com/samchiRobot/UND_Robotics/
 ```
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd /home/workspace/project2/
+$ cd ~/catkin_ws/UND_Robotics/project2
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd /home/workspace/project2/
+$ cd ~/catkin_ws/UND_Robotics/project2
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
@@ -77,7 +78,7 @@ $ roslaunch my_robot world.launch
 Open new terminal
 
 ```sh
-$ cd /home/workspace/project2/
+$ cd ~/catkin_ws/UND_Robotics/project2
 $ source devel/setup.bash
 $ roslaunch ball_chaser ball_chaser.launch
 ```
@@ -86,7 +87,7 @@ $ roslaunch ball_chaser ball_chaser.launch
 Open new terminal
 
 ```sh
-$ cd /home/workspace/project2/
+$ cd ~/catkin_ws/UND_Robotics/project2
 $ source devel/setup.bash
 $ rosrun rqt_image_view rqt_image_view  
 ```
