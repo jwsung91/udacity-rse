@@ -44,7 +44,7 @@ $ sudo apt-get update
 $ sudo apt-get upgrade -y
 ```
 
-#### Step 2 Clone the lab folder in /home/workspace/
+#### Step 2 Clone the lab folder in ~/catkin_ws
 ```sh
 $ mkdir ~/catkin_ws
 $ cd ~/catkin_ws
