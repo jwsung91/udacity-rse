@@ -1,6 +1,8 @@
 # Udacity NanoDegree - Robotics Software Engineer 
 Projects for Robotics Software Engineer NanoDegree Course in Udacity Inc. 
 
+![certification](certification.png)
+
 ## Project 1. Build My World
 - Design a Gazebo World environment by including multiple models
 
