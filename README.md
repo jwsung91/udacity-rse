@@ -1,5 +1,8 @@
 # Udacity NanoDegree - Robotics Software Engineer
 
+![ROS Kinetic badge](https://img.shields.io/badge/ROS-kinetic-orange)
+![C++ badge](https://img.shields.io/badge/-c++-black?logo=c%2B%2B&style=social)
+
 Projects for Robotics Software Engineer NanoDegree Course in Udacity Inc.
 
 ![certification](img/certification.png)
