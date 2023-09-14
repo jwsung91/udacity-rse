@@ -33,24 +33,24 @@ $ sudo apt-get upgrade -y
 ```sh
 $ mkdir ~/catkin_ws
 $ cd ~/catkin_ws
-$ git clone https://github.com/samchiRobot/UND_Robotics
+$ git clone https://github.com/jwsung91/project-udacity-robotics-software-engineer
 ```
 
 #### Step 3 Compile the code
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project1/build/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project1/build/
 $ cmake ../
 $ make
 ```
 
 #### Step 4 Add the library path to the Gazebo plugin path  
 ```sh
-$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}: ~/catkin_ws/UND_Robotics/project1/build
+$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}: ~/catkin_ws/project-udacity-robotics-software-engineer/project1/build
 ```
 
 #### Step 5 Run the Gazebo World file  
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project1/build/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project1/build/
 $ gazebo jin_world
 ```
 

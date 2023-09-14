@@ -42,18 +42,18 @@ $ sudo apt-get upgrade -y
 ```sh
 $ mkdir ~/catkin_ws
 $ cd ~/catkin_ws
-$ git clone https://github.com/samchiRobot/
+$ git clone https://github.com/jwsung91/project-udacity-robotics-software-engineer/
 ```
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project4/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project4/
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project4/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project4/
 $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
@@ -63,7 +63,7 @@ $ roslaunch my_robot world.launch
 Open new terminal
 
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project4/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project4/
 $ source devel/setup.bash
 $ roslaunch my_robot mapping.launch
 ```
@@ -72,7 +72,7 @@ $ roslaunch my_robot mapping.launch
 Open new terminal
 
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project4/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project4/
 $ source devel/setup.bash
 $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```

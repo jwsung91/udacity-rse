@@ -86,24 +86,24 @@ $ sudo apt-get upgrade -y
 ```sh
 $ mkdir ~/catkin_ws
 $ cd ~/catkin_ws
-$ git clone https://github.com/samchiRobot/UND_Robotics/
+$ git clone https://github.com/jwsung91/project-udacity-robotics-software-engineer/
 ```
 
 #### Step 3 Compile the code by catkin
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project5/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project5/
 $ catkin_make
 ```
 
 #### Step 4 Launch the robot inside my world
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project5/
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project5/
 $ source devel/setup.bash
 ```
 
 #### Step 5 Launch shell script file
 ```sh
-$ cd ~/catkin_ws/UND_Robotics/project5/src/scripts
+$ cd ~/catkin_ws/project-udacity-robotics-software-engineer/project5/src/scripts
 $ ./home_service.sh
 ```
 
